@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="burger.css">
+    <style>
+        form{
+            margin-top: -40px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        input{
+            width:100%;
+            height:30px;
+        }
+        #hello1{
+            width:101%;
+            height:40px;
+            background:black;
+            color: white;
+            font-size:20px;
+        }
+        section{
+            background-color:white;
+            padding-top:40px;
+        }
+       #text1 h1{
+            text-align: center;
+            font-size: 30px;
+        }
+        #container6{
+            text-align: center;
+            background: white;
+        }
+        #container6 a{
+            margin-top:5px;
+            text-decoration: none;
+            display:inline-block;
+            background-color: yellow;
+            width:100px;
+            color: black;
+            padding: 8px 13px;
+        }
+        .container{
+            padding:30px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:2rem;
+        }
+        .box img{
+            width:100%;
+            height:40vh;
+            margin-bottom: -15px;
+
+        }
+        @media (max-width:750px){
+            .container{
+                grid-template-columns: auto auto;
+            }
+            
+        }
+        @media (max-width:300px){
+            .container{
+                grid-template-columns: auto;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+    <h3 id="text">Snacks</h3>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="burgerabout.html">About</a></li>
+        <li><a href="burgergallery.html">Gallery</a></li>
+        <li><a href="burgercontact.html">Contact</a></li>
+        <li><a href="burgerservice.html">Service</a></li>
+    </ul>
+    <ul id="icon">
+        <li><a href=""><i class='bx bx-user'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href="#navmenu"><i id="navmenu" class='bx bx-menu'></i></a></li>
+    </ul>
+    </header>
+    <section id="container6">
+        <img src="bug/pizza2.jpg" width="220px" height="120vh" style="padding-top: 150px;"><br>
+        <a href="#move">Price:$5</a>
+
+        <h1 id="text1"style="margin-bottom:-20px;">Related Food</h1>
+        <div class="container">
+            <div class="box">
+                <img src="bug/pizza3.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, laboriosam.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="bug/pizza4.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, laboriosam.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="bug/bug1.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, laboriosam.</p>
+                <button class="btn">Order Now</button>
+            </div>
+            <div class="box">
+                <img src="bug/bug2.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, laboriosam.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <form onsubmit="return validationform()" id="move">
+            <h1 id="text1">Filled The Form</h1>
+            <label>Name</label>
+            <input tpye="text" id="name" placeholder="EnterName"><br><br>
+            <label>Email</label>
+            <input tpye="email" id="email" placeholder="Enter Email"><br><br>
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter Password"><br><br>
+            <input type="submit" value="Order Now"  id="hello1">
+        </form>
+    </section>
+    <footer>
+        <h2>@CopyRight 2024</h2>
+    </footer>
+    
+    <script src="bug.js"></script>
+    <script>
+function validationform(){
+            var name = document.querySelector("#name").value;
+            var email = document.querySelector("#email").value;
+            var pass = document.querySelector("#password").value;
+        
+        
+            if(name.trim().length === 0){
+             alert("Enter Name");
+             return false;
+            }
+            if(email.trim().length === 0){
+             alert("Enter Email");
+             return false;
+            }
+            if(pass.trim().length === 0){
+             alert("Enter Password");
+             return false;
+            }
+           
+            document.querySelector("#hello1");
+           alert("Your Order Is Booked");
+            return true;
+
+            }
+        </script>
+    </body>
+    </html>

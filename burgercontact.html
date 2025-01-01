@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="burger.css">
+    <style>
+        input{
+            width:100%;
+            height:30px;
+        }
+        #hello{
+            width:101%;
+            height:40px;
+            background:#04AA6D;
+            border-color: #04AA6D;
+            color: white;
+            font-size:20px;
+        }
+        section{
+            background-color: azure;
+            padding:20px;
+        }
+       #text1 h1{
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+    <h3 id="text">Snacks</h3>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="burgerabout.html">About</a></li>
+        <li><a href="burgergallery.html">Gallery</a></li>
+        <li><a href="burgercontact.html">Contact</a></li>
+        <li><a href="burgerservice.html">Service</a></li>
+    </ul>
+    <ul id="icon">
+        <li><a href=""><i class='bx bx-user'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href="#navmenu"><i id="navmenu" class='bx bx-menu'></i></a></li>
+    </ul>
+    </header>
+    <section>
+        <form onsubmit="return validationform()">
+            <h1 id="text1">Submit The Form</h1>
+            <label>First Name</label>
+            <input tpye="text" id="first" placeholder="Enter FirstName"><br><br>
+            <label>Last Name</label>
+            <input tpye="text" id="last" placeholder="Enter LastName"><br><br>
+            <label>Country</label>
+            <input type="select" id="count" placeholder="Enter Country Name"><br><br>
+            <label>Message</label>
+            <input type="textarea" id="reply" placeholder="Write Some Message......" ><br><br>
+            <input type="submit" value="submit"  id="hello">
+        </form>
+    </section>
+    <footer>
+        <h2>@CopyRight 2024</h2>
+    </footer>
+    
+    <script src="bug.js"></script>
+    <script>
+function validationform(){
+            var name = document.querySelector("#first").value;
+            var last = document.querySelector("#last").value;
+            var count = document.querySelector("#count").value;
+            var count1 = document.querySelector("#reply").value;
+        
+            if(name.trim().length === 0){
+             alert("Required firstName");
+             return false;
+            }
+            if(last.trim().length === 0){
+             alert("Required LastName");
+             return false;
+            }
+            if(count.trim().length === 0){
+             alert("Required Country");
+             return false;
+            }
+            if(count1.trim().length === 0){
+             alert("Required Message");
+             return false;
+            }
+            document.querySelector("#hello");
+           alert("Your Form Is Submit SuccessFully");
+            return true;
+
+            }
+        </script>
+    </body>
+    </html>

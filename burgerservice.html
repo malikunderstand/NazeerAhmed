@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="burger.css">
+    <style>
+        #homes{
+        background:#fffbf0;
+        padding-top: 100px;
+        }
+        #homes h1{
+            margin-top: 100px;
+            text-align: center;
+            font-size: 35px;
+        }
+         .home{
+            border-radius: 5px;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:2rem;
+            text-align: center;
+         }
+         .home1 p,h5{
+            width:100%;
+         }
+        .home1 p{
+            text-align: center;
+            font-size: 18px;
+
+         }
+         .home1 h5{
+            font-size: 20px;
+         }
+         .color{
+            color:red;
+         }
+         @media (max-width:750px){
+            .home{grid-template-columns: auto auto;}
+         }
+         @media (max-width:480px){
+            .home{grid-template-columns: auto auto;}
+            .home1 p{
+            text-align: center;
+            font-size: 12px;
+
+         }
+         .home1 h5{
+            font-size: 10px;
+         }
+         }
+         @media (max-width:300px){
+            .home{grid-template-columns: 100px;}
+            .home1{text-align: center;}
+            #homes h1{
+            text-align: center;
+            flex-direction: row;
+            margin-left: 5px;
+            font-size: 13px;
+        }
+         }
+    </style>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+    <h3 id="text">Snacks</h3>
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="burgerabout.html">About</a></li>
+        <li><a href="burgergallery.html">Gallery</a></li>
+        <li><a href="burgercontact.html">Contact</a></li>
+        <li><a href="burgerservice.html">Service</a></li>
+    </ul>
+    <ul id="icon">
+        <li><a href=""><i class='bx bx-user'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+        <li><a href=""><i class='bx bxl-instagram'></i></a></li>
+        <li><a href="#navmenu" ><i id="navmenu" class='bx bx-menu'></i></a></li>
+    </ul>
+    </header>
+    <section id="homes">
+        <h1>Our Services</h1>
+        <div class="container">
+            <div class="home1">
+                <h5>Address</h5>
+                <p>Street No:2345-Block05</p>
+                <p>65100 District Ghotki</p>
+            </div>
+            <div class="home1">
+                <h5>Book A Table</h5>
+                <p>Lorem, ipsum dolor sit amet</p>
+                <p>Lorem, ipsum dolor sit amet</p>
+                <p class="color">09876543211</p>
+            </div>
+            <div class="home1">
+                <h5>Opening Hours</h5>
+                <p>Monday-Friday</p>
+                <p>10:00AM-11:00PM</p>
+            </div>
+            <div class="home1">
+                <h5>Hall And Room</h5>
+                <p>Family Hall</p>
+                <p>Man Hall</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h2>@CopyRight 2024</h2>
+    </footer>
+
+    <script src="bug.js"></script>
+
+    </body>
+    </html>
